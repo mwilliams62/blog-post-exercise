@@ -18,7 +18,7 @@ function StorageException(message) {
 const BlogPosts = {
   create: function(title, content, author, publishDate) {
     const post = {
-      id: uuid.v4(),
+      id: v4(),
       title: title,
       content: content,
       author: author,
@@ -67,4 +67,4 @@ function createBlogPostsModel() {
 }
 
 
-module.exports = {BlogPosts: createBlogPostsModel()};
+export const BlogPosts = createBlogPostsModel();

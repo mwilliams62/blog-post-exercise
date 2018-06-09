@@ -2,9 +2,10 @@
   "name": "blog-post-exercise",
   "version": "1.0.0",
   "description": "CRUD exercise",
-  "main": "models.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/mwilliams62/blog-post-exercise#readme",
   "dependencies": {
+    "express": "^4.16.3",
     "uuid": "^3.2.1"
-  }
+  },
+  "devDependencies": {}
 }
