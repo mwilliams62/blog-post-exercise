@@ -1,0 +1,22 @@
+{
+  "name": "blog-post-exercise",
+  "version": "1.0.0",
+  "description": "CRUD exercise",
+  "main": "models.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwilliams62/blog-post-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mwilliams62/blog-post-exercise/issues"
+  },
+  "homepage": "https://github.com/mwilliams62/blog-post-exercise#readme",
+  "dependencies": {
+    "uuid": "^3.2.1"
+  }
+}
