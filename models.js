@@ -64,7 +64,7 @@ function createBlogPostsModel() {
   const storage = Object.create(BlogPosts);
   storage.posts = [];
   return storage;
-}
+};
 
 
-export const BlogPosts = createBlogPostsModel();
+//export const BlogPosts = createBlogPostsModel();

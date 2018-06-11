@@ -19,6 +19,7 @@
   "homepage": "https://github.com/mwilliams62/blog-post-exercise#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "morgan": "^1.9.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {}

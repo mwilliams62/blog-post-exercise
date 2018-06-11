@@ -1,5 +1,5 @@
 const express = require('express');
-//const morgan = require('morgan');
+const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
 const blogPost = require('./models');
@@ -7,13 +7,13 @@ const blogPost = require('./models');
 const jsonParser = bodyParser.json();
 const app = express();
 
-const getPostRouter = require('./blog-posts');
-const deletePutRouter = require('./blog-posts/:id');
+const getPostRouter = require('./getPostRouter');
+//const deletePutRouter = require('./blog-posts/:id');
 
 //log the http layer
-app.use(morgan('common'));
+//app.use(morgan('common'));
 app.use('/blog-posts', getPostRouter);
-app.use('/blog-posts/:id', deletePutRouter);
+//app.use('/blog-posts/:id', deletePutRouter);
 
 
 BlogPosts.create('1st Post', 'This is the first post', 'M-dub', Date.now());
