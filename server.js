@@ -1,12 +1,21 @@
 const express = require('express');
+const router = express.Router();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-const blogPost = require('./models');
+const {BlogPosts} = require('./models');
 
 const jsonParser = bodyParser.json();
 const app = express();
 
+// log the http layer
+app.use(morgan('common'));
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/views/index.html');
+});
+
+//route incoming requests to the express router instances
 const getPostRouter = require('./getPostRouter');
 //const deletePutRouter = require('./blog-posts/:id');
 
