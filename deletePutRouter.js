@@ -1,11 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const router = express.Router();
-//const jsonParser = bodyParser.json();
+const jsonParser = bodyParser.json();
 
 const {BlogPosts} = require('./models');
 
-router.put('/:id', (req, res) => {
+router.put('/:id', jsonParser, (req, res) => {
     const requiredFields = ['title','id', 'content', 'author', 'publishDate'];
     for (let i=0; i<requiredFields.length; i++) {
         const field = requiredFields[i];
@@ -21,6 +21,14 @@ router.put('/:id', (req, res) => {
             console.error(message);
             return res.status(400).send(message);
     }
+    console.log(`Updating blog post: \`{$req.params.title}\``);
+    const updatedPost = BlogPosts.update({
+        id: req.params.id,
+        title: req.body.title,
+        author: req.body.author,
+        content: req.body.content,
+        publishDate: req.body.publishDate || Date.now()
+    });
     res.status(204).end();
 });
 

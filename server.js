@@ -22,7 +22,7 @@ const deletePutRouter = require('./deletePutRouter');
 //log the http layer
 //app.use(morgan('common'));
 app.use('/getPostRouter', getPostRouter);
-app.use('/deletePutRouter/:id', deletePutRouter);
+app.use('/deletePutRouter', deletePutRouter);
 
 
 BlogPosts.create('1st Post', 'This is the first post', 'M-dub', Date.now());
