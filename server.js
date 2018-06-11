@@ -17,12 +17,12 @@ app.get('/', (req, res) => {
 
 //route incoming requests to the express router instances
 const getPostRouter = require('./getPostRouter');
-//const deletePutRouter = require('./blog-posts/:id');
+const deletePutRouter = require('./deletePutRouter');
 
 //log the http layer
 //app.use(morgan('common'));
-app.use('/blog-posts', getPostRouter);
-//app.use('/blog-posts/:id', deletePutRouter);
+app.use('/getPostRouter', getPostRouter);
+app.use('/deletePutRouter/:id', deletePutRouter);
 
 
 BlogPosts.create('1st Post', 'This is the first post', 'M-dub', Date.now());

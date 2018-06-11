@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     res.json(BlogPosts.get());
 });
 
-router.post('/', (req, res) => {
+router.post('/', jsonParser, (req, res) => {
     const requiredFields = ['title', 'content', 'author', 'publishDate'];
     for (let i=0; i<requiredFields.length; i++) {
         const field = requiredFields[i];
